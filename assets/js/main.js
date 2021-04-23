@@ -6,7 +6,8 @@ var eta = parseInt(prompt("Qual è la tua età?"));
 var prezzo = 0.21;
 var prezzoXkm = (prezzo * km);
 var prezzofinale = 0;
-console.log(prezzoXkm);
+document.getElementById("eta").innerHTML = eta + " Anni";
+document.getElementById("km").innerHTML = km + " Km";
 
 //va applicato uno sconto del 20 % per i minorenni
 //va applicato uno sconto del 40 % per gli over 65.
@@ -15,11 +16,20 @@ if (eta < 18) {
     prezzo20 = (prezzo20 / 100);
     prezzofinale = (prezzoXkm - prezzo20);
     prezzofinale = prezzofinale.toFixed(2);
-    console.log(prezzofinale);
+
+    document.getElementById("sconto").innerHTML = "Hai diritto ad uno sconto del 20%!";
+    document.getElementById("prezzo").innerHTML = prezzofinale + "€";
+
 } else if (eta > 65) {
     var prezzo40 = (40 * prezzoXkm);
     prezzo40 = (prezzo40 / 100);
     prezzofinale = (prezzoXkm - prezzo40);
     prezzofinale = prezzofinale.toFixed(2);
-    console.log(prezzofinale);
+
+    document.getElementById("sconto").innerHTML = "Hai diritto ad uno sconto del 40%!";
+    document.getElementById("prezzo").innerHTML = prezzofinale + "€";
+} else {
+
+    document.getElementById("sconto").innerHTML = "Nessuno sconto.";
+    document.getElementById("prezzo").innerHTML = prezzoXkm + "€";
 }

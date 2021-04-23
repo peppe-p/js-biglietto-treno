@@ -1,0 +1,24 @@
+body {
+    background-image: url("../img/wallpaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+main {
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5)
+}
+h1 {
+    padding: 15px 50px;
+    color: white;
+    font-weight: 800;
+}
+h3 {
+    margin-right: 40px;
+    text-decoration: underline;
+    color:yellowgreen;
+}
+.main div {
+    color: white;
+}
